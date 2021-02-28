@@ -342,7 +342,9 @@ body {
   margin: 0;
   font-family: "Playfair Display", serif;
   font-family: "Open Sans", sans-serif;
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  overflow-x: hidden;
+  color: #303031; }
 
 * {
   box-sizing: border-box; }
@@ -352,3 +354,157 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   width: 100%; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0px; }
+  .header__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer; }
+    .header__logo p {
+      margin-left: 10px; }
+
+.nav__list {
+  display: flex;
+  list-style: none; }
+  .nav__list li {
+    margin-left: 20px; }
+  .nav__list a {
+    text-decoration: none;
+    color: #303031;
+    transition: 0.2s; }
+    .nav__list a:hover {
+      color: #71a894; }
+
+.hero {
+  display: flex;
+  align-items: center; }
+  .hero__content {
+    flex: 0 0 50%; }
+  .hero__title {
+    margin-bottom: 24px; }
+  .hero__subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #66645e; }
+  .hero__image {
+    transform: translateX(); }
+  .hero__btn {
+    padding: 20px 25px;
+    background-color: #71a894;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s; }
+    .hero__btn:hover {
+      background-color: #578f7b; }
+
+.advantages {
+  margin-top: 120px; }
+  .advantages__title {
+    text-align: center;
+    margin-bottom: 20px; }
+  .advantages__description {
+    text-align: center;
+    max-width: 895px;
+    margin: 0 auto; }
+  .advantages__cards {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between; }
+  .advantages__card {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 50px 20px;
+    margin: 0 10px;
+    max-width: 427px;
+    width: 100%; }
+    .advantages__card img {
+      margin-bottom: 20px; }
+    .advantages__card h4 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 20px; }
+    .advantages__card p {
+      font-size: 18px; }
+
+.founders {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 140px; }
+  .founders__content {
+    max-width: 644px; }
+    .founders__content img {
+      margin-bottom: 10px; }
+    .founders__content h2 {
+      margin-bottom: 20px; }
+    .founders__content p {
+      color: #66645e; }
+
+.founders__members {
+  max-width: 484px;
+  width: 100%;
+  position: relative; }
+
+.members__card {
+  border: 4px solid #303031;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px; }
+
+.members__shadow {
+  position: absolute;
+  background-color: #71a894;
+  max-width: 484px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 16px;
+  transform: translate(2%, 2%); }
+
+.members__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; }
+
+.members__image {
+  margin-right: 20px; }
+
+.members__info {
+  color: #66645e;
+  font-size: 16px; }
+
+.members__name {
+  margin-bottom: 10px;
+  font-size: 20px; }
+
+.card__title {
+  font-size: 32px;
+  margin-bottom: 35px; }
+
+.investors {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between; }
+  .investors__card {
+    background: #ffffff;
+    border: 4px solid #303031;
+    border-radius: 16px;
+    max-width: 484px;
+    padding: 30px; }
+  .investors__content {
+    max-width: 644px;
+    width: 100%; }
+    .investors__content h2 {
+      margin-bottom: 20px; }

@@ -8,6 +8,8 @@ body {
   font-family: "Playfair Display", serif;
   font-family: "Open Sans", sans-serif;
   background-color: #f8f8f8;
+  overflow-x: hidden;
+  color: $black;
 }
 
 * {
@@ -19,4 +21,238 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   width: 100%;
+}
+
+// HEADER
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0px;
+  &__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+      margin-left: 10px;
+    }
+  }
+}
+
+// Navigation
+
+.nav {
+  &__list {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-left: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+      transition: 0.2s;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+// Main
+// Hero
+
+.hero {
+  display: flex;
+  align-items: center;
+  &__content {
+    flex: 0 0 50%;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: $gray;
+  }
+
+  &__image {
+    transform: translateX();
+    img {
+      // max-width: 100%;
+    }
+  }
+
+  &__btn {
+    padding: 20px 25px;
+    background-color: $green;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: darken($green, 10%);
+    }
+  }
+}
+
+// advanatages
+
+.advantages {
+  margin-top: 120px;
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    text-align: center;
+    max-width: 895px;
+    margin: 0 auto;
+  }
+
+  &__cards {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+  }
+  &__card {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 50px 20px;
+    margin: 0 10px;
+    max-width: 427px;
+    width: 100%;
+    img {
+      margin-bottom: 20px;
+    }
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+// founders
+
+.founders {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 140px;
+
+  &__content {
+    max-width: 644px;
+
+    img {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $gray;
+    }
+  }
+}
+
+.founders {
+  &__members {
+    max-width: 484px;
+    width: 100%;
+    position: relative;
+  }
+}
+.members {
+  &__card {
+    border: 4px solid #303031;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+  }
+
+  &__shadow {
+    position: absolute;
+    background-color: $green;
+    max-width: 484px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 16px;
+    transform: translate(2%, 2%);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    margin-right: 20px;
+  }
+
+  &__info {
+    color: $gray;
+    font-size: 16px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+.card {
+  &__title {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+}
+
+// Investors
+
+.investors {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+
+  &__card {
+    background: #ffffff;
+    border: 4px solid #303031;
+    border-radius: 16px;
+    max-width: 484px;
+    padding: 30px;
+  }
+
+  &__content {
+    max-width: 644px;
+    width: 100%;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
 }
