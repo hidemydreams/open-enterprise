@@ -2,7 +2,6 @@ node_modules/**
 node_modules/../*
 .DS_Store
 .DS_Store
-src/.DS_Store
-src/img/.DS_Store
-src/sass/.DS_Store
-src/script/.DS_Store
+style/.DS_Store
+js/.DS_Store
+img/.DS_Store

@@ -320,22 +320,29 @@ template {
 
 p {
   font-size: 18px;
-  line-height: 1.35; }
+  line-height: 1.35;
+  font-family: "Open Sans", sans-serif; }
 
 h1 {
-  font-size: 64px; }
+  font-size: 64px;
+  font-family: "Playfair Display", serif; }
 
 h2 {
-  font-size: 48px; }
+  font-size: 48px;
+  font-family: "Playfair Display", serif; }
 
 h3 {
   font-size: 48px; }
+
+.description {
+  font-size: 18px; }
 
 body {
   padding: 0;
   margin: 0;
   font-family: "Playfair Display", serif;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background-color: #f8f8f8; }
 
 * {
   box-sizing: border-box; }
