@@ -1,18 +1,18 @@
 @import "./variables";
 
 p {
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.35;
   font-family: $sans;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 3rem;
   font-family: $playfair;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 2.5rem;
   font-family: $playfair;
 }
 
@@ -21,5 +21,5 @@ h3 {
 }
 
 .description {
-  font-size: 18px;
+  font-size: 1.2rem;
 }

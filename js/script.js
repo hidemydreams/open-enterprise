@@ -1,7 +1,13 @@
 const openBurger = document.querySelector(".nav__burger");
-const navList = document.querySelector(".nav__list");
+const nav = document.querySelector(".nav");
+const navExit = document.querySelector(".nav__exit");
 openBurger.addEventListener("click", openBurgerHandler);
+navExit.addEventListener("click", closeBurgerHandler);
 
 function openBurgerHandler() {
-  navList.classList.add("open");
+  nav.classList.add("open");
+}
+
+function closeBurgerHandler() {
+  nav.classList.remove("open");
 }
