@@ -29,10 +29,6 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
 h1,
 h2,
 h3,
@@ -320,29 +316,22 @@ template {
 
 p {
   font-size: 1rem;
-  line-height: 1.35;
+  line-height: 1.5;
   font-family: "Open Sans", sans-serif; }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-family: "Playfair Display", serif; }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: "Playfair Display", serif; }
 
 h3 {
-  font-size: 48px; }
+  font-size: 1.9rem; }
 
-.description {
-  font-size: 1.2rem; }
-
-:root {
-  font-size: calc(1.1rem + ((1vw - 7.68px) * 0.6944)); }
-
-@media (min-width: 1600px) {
-  :root {
-    font-size: 1.3em; } }
+html {
+  scroll-behavior: smooth; }
 
 body {
   padding: 0;
@@ -360,9 +349,12 @@ body {
 
 .container {
   max-width: 1350px;
-  padding: 0 15px;
+  padding: 0 1em;
   margin: 0 auto;
   width: 100%; }
+
+section {
+  margin: 70px 0px; }
 
 .header {
   display: flex;
@@ -432,7 +424,7 @@ body {
   margin: 0; }
   .nav.open .nav__list li {
     margin: 20px;
-    font-size: 1.5rem; }
+    font-size: 0.5rem; }
   .nav.open .nav__list a {
     margin: 0;
     padding: 0;
@@ -442,22 +434,24 @@ body {
 .hero {
   display: flex;
   align-items: center; }
+  .hero__body {
+    max-width: 450px; }
   .hero__content {
-    flex: 0 0 50%; }
-    @media (max-width: 980px) {
+    flex: 0 0 45%; }
+    @media (max-width: 768px) {
       .hero__content {
         text-align: center;
         margin: 0 auto; } }
   .hero__title {
     margin-bottom: 24px;
-    font-size: 3rem; }
+    font-size: 2.7rem; }
   .hero__subtitle {
     font-size: 1rem;
     margin-bottom: 40px;
     color: #66645e; }
   .hero__image img {
     max-width: 100%; }
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
     .hero__image {
       display: none; } }
   .hero__btn {
@@ -489,17 +483,15 @@ body {
     text-align: center;
     background-color: white;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 427px;
+    max-width: 400px;
     padding: 1.5em 1em;
-    margin: 30px 0px; }
+    margin: 1em 0.5em; }
     .advantages__card img {
       margin-bottom: 20px; }
     .advantages__card h4 {
-      font-size: 24px;
-      font-weight: 400;
+      font-size: 1.1rem;
       margin-bottom: 20px; }
     .advantages__card p {
-      font-size: 18px;
       max-width: 379px; }
 
 .founders {
@@ -532,7 +524,7 @@ body {
   border: 4px solid #303031;
   box-sizing: border-box;
   background-color: white;
-  padding: 40px;
+  padding: 1.8em;
   border-radius: 16px;
   min-width: 240px; }
 
@@ -607,7 +599,6 @@ body {
       font-size: 16px;
       margin-top: 10px; }
   .investors__description {
-    font-size: 16px;
     margin-bottom: 30px; }
   .investors__stats {
     display: flex;
@@ -634,7 +625,7 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 12px;
+    padding: 1em;
     border-radius: 16px;
     transition: 0.2s;
     margin: 1.3em 0; }
@@ -647,7 +638,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 1em;
   max-width: 240px;
   margin-top: 40px; }
   .profile__info {
@@ -668,24 +659,26 @@ body {
     background-color: #303031;
     color: white;
     text-decoration: none;
-    padding: 10px 40px;
+    padding: 0.5em 1.8em;
     margin-top: 10px;
-    border-radius: 16px;
-    transition: 0.2s; }
+    border-radius: 0.5em 0.7em;
+    transition: 0.2s;
+    font-size: 0.7rem; }
     .profile__link:hover {
       background-color: #49494b; }
 
 .contributors {
   display: flex;
   margin-top: 100px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   @media (max-width: 768px) {
     .contributors {
       align-items: center; } }
   .contributors__title {
     margin-bottom: 20px; }
   .contributors__description {
-    margin-bottom: 20px; }
+    margin-bottom: 3em; }
   @media (max-width: 768px) {
     .contributors {
       flex-direction: column; } }
@@ -703,7 +696,7 @@ body {
     background: #ffffff;
     border: 4px solid #303031;
     border-radius: 16px;
-    padding: 24px;
+    padding: 1.5em;
     max-width: 560px;
     width: 100%;
     margin-bottom: 10px;
@@ -717,10 +710,11 @@ body {
       border-radius: 16px;
       background-color: #71a894;
       text-decoration: none;
-      padding: 10px;
+      padding: 0.8em;
       color: white;
       text-transform: uppercase;
-      font-weight: 300; }
+      font-weight: 300;
+      white-space: nowrap; }
     .contributors__item-share p {
       font-size: 16px;
       max-width: 404px; }
@@ -744,7 +738,7 @@ body {
     max-width: 381px;
     width: 100%;
     margin-left: -5px;
-    padding: 20px;
+    padding: 1em;
     margin-right: 10px; }
     @media (max-width: 768px) {
       .contributors__item-applicants {
@@ -788,7 +782,9 @@ body {
     text-align: center;
     margin: 40px 0px; }
   .help__desc {
-    margin-top: 30px; }
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 600px; }
   .help__cards {
     display: flex;
     flex-wrap: wrap;
@@ -797,21 +793,22 @@ body {
     background-color: white;
     padding: 1em;
     border-radius: 1em;
+    font-size: 0.9rem;
     max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px; }
   .help h3 {
-    font-size: 1rem;
-    margin-bottom: 1em; }
-  .help p {
-    margin-bottom: 1em; }
+    font-size: 1.03rem;
+    margin-bottom: 1em;
+    max-width: 200px; }
   .help__card-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.8em; }
+    margin-top: 0.8em;
+    align-items: center; }
   .help__card-row-quantity {
     background-color: #71a894;
     border-radius: 0.5em;

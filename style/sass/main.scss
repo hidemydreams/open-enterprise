@@ -2,16 +2,22 @@
 @import "./variables";
 @import "./typography";
 
-:root {
-  font-size: calc(1.1rem + ((1vw - 7.68px) * 0.6944));
-}
+// html {
+//   font-size: 1.125em;
+// }
+// @media screen and (min-width: 320px) {
+//   html {
+//     font-size: calc(1.125em + 1 * ((100vw - 320px) / 680));
+//   }
+// }
+// @media screen and (min-width: 1200px) {
+//   html {
+//     font-size: 1.2em;
+//   }
+// }
 
-@media (min-width: 768px) {
-}
-@media (min-width: 1600px) {
-  :root {
-    font-size: 1.3em;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,9 +38,13 @@ body {
 
 .container {
   max-width: 1350px;
-  padding: 0 15px;
+  padding: 0 1em;
   margin: 0 auto;
   width: 100%;
+}
+
+section {
+  margin: 70px 0px;
 }
 
 // HEADER
@@ -129,7 +139,7 @@ body {
 
   li {
     margin: 20px;
-    font-size: 1.5rem;
+    font-size: 0.5rem;
   }
 
   a {
@@ -146,10 +156,14 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  &__content {
-    flex: 0 0 50%;
 
-    @media (max-width: $laptops) {
+  &__body {
+    max-width: 450px;
+  }
+  &__content {
+    flex: 0 0 45%;
+
+    @media (max-width: $tablets) {
       text-align: center;
       margin: 0 auto;
     }
@@ -157,7 +171,7 @@ body {
 
   &__title {
     margin-bottom: 24px;
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   &__subtitle {
@@ -171,7 +185,7 @@ body {
       max-width: 100%;
     }
 
-    @media (max-width: $laptops) {
+    @media (max-width: $tablets) {
       display: none;
     }
   }
@@ -216,21 +230,19 @@ body {
     text-align: center;
     background-color: white;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 427px;
+    max-width: 400px;
     padding: 1.5em 1em;
-    margin: 30px 0px;
+    margin: 1em 0.5em;
 
     img {
       margin-bottom: 20px;
     }
     h4 {
-      font-size: 24px;
-      font-weight: 400;
+      font-size: 1.1rem;
       margin-bottom: 20px;
     }
 
     p {
-      font-size: 18px;
       max-width: 379px;
     }
   }
@@ -281,7 +293,7 @@ body {
     border: 4px solid #303031;
     box-sizing: border-box;
     background-color: white;
-    padding: 40px;
+    padding: 1.8em;
     border-radius: 16px;
     min-width: 240px;
   }
@@ -380,7 +392,6 @@ body {
   }
 
   &__description {
-    font-size: 16px;
     margin-bottom: 30px;
   }
 
@@ -423,7 +434,7 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 12px;
+    padding: 1em;
     border-radius: 16px;
     transition: 0.2s;
     margin: 1.3em 0;
@@ -442,7 +453,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 1em;
   max-width: 240px;
   margin-top: 40px;
   &__info {
@@ -474,10 +485,11 @@ body {
     background-color: $black;
     color: white;
     text-decoration: none;
-    padding: 10px 40px;
+    padding: 0.5em 1.8em;
     margin-top: 10px;
-    border-radius: 16px;
+    border-radius: 0.5em 0.7em;
     transition: 0.2s;
+    font-size: 0.7rem;
 
     &:hover {
       background-color: lighten($black, 10%);
@@ -489,6 +501,7 @@ body {
   display: flex;
   margin-top: 100px;
   justify-content: space-between;
+  align-items: center;
 
   @media (max-width: $tablets) {
     align-items: center;
@@ -499,7 +512,7 @@ body {
   }
 
   &__description {
-    margin-bottom: 20px;
+    margin-bottom: 3em;
   }
 
   @media (max-width: $tablets) {
@@ -528,7 +541,7 @@ body {
 
     border: 4px solid #303031;
     border-radius: 16px;
-    padding: 24px;
+    padding: 1.5em;
     max-width: 560px;
     width: 100%;
     margin-bottom: 10px;
@@ -545,10 +558,11 @@ body {
       border-radius: 16px;
       background-color: $green;
       text-decoration: none;
-      padding: 10px;
+      padding: 0.8em;
       color: white;
       text-transform: uppercase;
       font-weight: 300;
+      white-space: nowrap;
     }
 
     p {
@@ -580,7 +594,7 @@ body {
     max-width: 381px;
     width: 100%;
     margin-left: -5px;
-    padding: 20px;
+    padding: 1em;
     margin-right: 10px;
 
     @media (max-width: $tablets) {
@@ -647,7 +661,9 @@ body {
   }
 
   &__desc {
+    margin: 0 auto;
     margin-top: 30px;
+    max-width: 600px;
   }
 
   &__cards {
@@ -660,6 +676,7 @@ body {
     background-color: white;
     padding: 1em;
     border-radius: 1em;
+    font-size: 0.9rem;
     max-width: 400px;
     display: flex;
     flex-direction: column;
@@ -668,12 +685,9 @@ body {
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.03rem;
     margin-bottom: 1em;
-  }
-
-  p {
-    margin-bottom: 1em;
+    max-width: 200px;
   }
 
   &__card-row {
@@ -681,6 +695,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 0.8em;
+    align-items: center;
   }
 
   &__card-row-quantity {

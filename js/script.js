@@ -6,8 +6,10 @@ navExit.addEventListener("click", closeBurgerHandler);
 
 function openBurgerHandler() {
   nav.classList.add("open");
+  document.body.style.overflow = "hidden";
 }
 
 function closeBurgerHandler() {
   nav.classList.remove("open");
+  document.body.style.overflow = "auto";
 }

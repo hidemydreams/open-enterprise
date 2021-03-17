@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Open Enterprise</title>
 </head>
 <body>
@@ -25,10 +26,10 @@
       </div>
       <nav class="nav">
         <ul class="nav__list">
-          <li><a href="#!">Why Open Enterprise</a></li>
-          <li><a href="#!">Features</a></li>
-          <li><a href="#!">Contribute</a></li>
-          <li><a href="#!">Request early access</a></li>
+          <li><a href="#why">Why Open Enterprise</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contribute">Contribute</a></li>
+          <li><a href="#request">Request early access</a></li>
         </ul>
         <div class="nav__exit">
           <i class="far fa-times-circle nav__exit"></i>
@@ -60,7 +61,7 @@
         </div>
       </section>
 
-      <section class="advantages">
+      <section class="advantages wow animate__animated animate__fadeInUp">
         <h2 class="advantages__title">
           Reimagining what it means to work
         </h2>
@@ -87,7 +88,7 @@
         </div>
       </section>
 
-      <section class="founders">
+      <section id="request" class="founders wow animate__animated animate__fadeInUp">
         <div class="founders__content content__block">
           <img src="img/round.svg" alt="Icon">
           <h2 class="founders__title">
@@ -149,7 +150,7 @@
       </section>
 
 
-      <section class="investors">
+      <section id="contribute" class="investors wow animate__animated animate__fadeInUp">
         <div class="investors__card">
           <div class="investors__info">
             <div class="investors__image">
@@ -195,7 +196,7 @@
       </section>
 
 
-      <section class="contributors">
+      <section id="why" class="contributors wow animate__animated animate__fadeInUp">
         <div class="contributors__content content__block">
           <img src="img/round3.svg" alt="Icon">
           <h2 class="contributors__title">
@@ -276,7 +277,7 @@
         </div>
       </section>
 
-      <section class="help">
+      <section id="features" class="help wow animate__animated animate__fadeInUp">
         <div class="help__intro">
           <h2>Help us improve Open Enterprise</h2>
           <p class="help__desc">As an Open Enterprise ourselves, we are actively looking for new talent to join our mission of improving
@@ -335,7 +336,7 @@
           </a>
       </section>
 
-      <section class="start">
+      <section class="start wow animate__animated animate__fadeInUp">
         <div class="start__content">
           <h2>Start an Open Enterprise</h2>
           <p>If you can’t wait to run a new or existing organization on Open Enterprise and are willing to explore and
@@ -366,6 +367,9 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
 </body>
-
 </html>
